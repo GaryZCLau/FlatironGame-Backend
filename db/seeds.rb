@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Player.destroy_all
+Skill.destroy_all
+Item.destroy_all
+Npc.destroy_all
+Event.destroy_all
+Choice.destroy_all
 # Player -------
 
     gab = Player.create(name: "Gabby", image: "gabby.png", health: "healthy", mood: "happy", stress: 0)
