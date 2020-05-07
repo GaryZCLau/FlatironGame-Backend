@@ -216,7 +216,7 @@ Choice.destroy_all
     #choice
         c28a = Choice.create(option: "Next", event_id: e28.id)
     #event
-        e29 = Event.create(evt: "Vote", content: "What would you like to name your cohort?", npc_id: vote.id)
+        e29 = Event.create(evt: "Vote", content: "What would you like to name your cohort?", npc_id: graham.id)
     #choice
         c29a = Choice.create(option: "Pry Babies", event_id: e29.id)
         c29b = Choice.create(option: "Go Getters and Trend Setters", event_id: e29.id)
