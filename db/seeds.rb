@@ -75,7 +75,7 @@ Choice.destroy_all
     # NPC Events
     pairprogram = Npc.create(name: "Pair Program", nickname: "Pair Program", description: "Team work makes the dream work!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
     mod1c = Npc.create(name: "Mod1 Code Challenge", nickname: "Mod1 Code Challenge", description: "Test your might!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
-
+    bed = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
     
     
 
@@ -154,3 +154,83 @@ Choice.destroy_all
     #choice
         c15a = Choice.create(option: "Oh no, what are we going to do?!", event_id: e15.id)
         c15b = Choice.create(option: "What is the refund policy?", event_id: e15.id)
+        c15b = Choice.create(option: "That really sucks :(", event_id: e15.id)
+    #event
+        e16 = Event.create(evt: "Intro 16", content: "This is terrible news but we'll do everything we can to make your Flatiron experience valuable. Lectures will be held on Zoom and we'll use Slack for updates! (+1 Stress, Mood changes to Disappointed)", npc_id: rei.id)
+    #choice
+        c16a = Choice.create(option: "Hope for the best", event_id: e16.id)
+        c16b = Choice.create(option: "Ask to speak to Signe's boss", event_id: e16.id)
+    #event
+        e17 = Event.create(evt: "Intro 17", content: "We're done for the day. Get some rest and we'll see you (online) tomorrow.", npc_id: graham.id)
+    #choice
+        c17a = Choice.create(option: "Go Home", event_id: e17.id)
+    #event
+        e18 = Event.create(evt: "Final Intro", content: "(I hope everything is going to be okay.....)", npc_id: bed.id)
+    #choice
+        c19 = Choice.create(option: "Go to Sleep", event_id: e18.id)
+
+        # end intro/day one story
+
+    #event
+        e20 = Event.create(evt: "Day Two", content: "First day of remote instruction, I wonder how it'll be. (- 5 Stress, Mood changed to Rested.", npc_id: bed.id)
+    #choice
+        c20a = Choice.create(option: "Turn on laptop and check Slack.", event_id: e20.id)
+    #event
+        e21 = Event.create(evt: "Day Two Again", content: "I was looking forward to meeting you all in person but I guess online will have to do. For attendance, please respond with your favorite sea animal.", npc_id: syl.id)
+    #choice
+        c21a = Choice.create(option: "Write: Turtles", event_id: e21.id)
+        c21b = Choice.create(option: "Write: Dolphins", event_id: e21.id)
+        c21c = Choice.create(option: "Write: Starfish", event_id: e21.id)
+        c21d = Choice.create(option: "Write: Octopus", event_id: e21.id)
+    #event
+        e22 = Event.create(evt: "Explain Pair Programming", content: "Cool animals, guys! Today we'll be doing Pair Programming. This is where you and a partner will work together on a especially tricky lab. Here are your partners!", npc_id: syl.id)
+    #choice
+        c22a = Choice.create(option: "Check Partners List", event_id: e22.id)
+    #event
+        e23 = Event.create(evt: "Meet Isabel", content: "Hi, it looks like we're partnered! My name is Isabel.", npc_id: isabel.id)
+    #choice
+        c23a = Choice.create(option: "Write: It's nice to meet you!", event_id: e23.id)
+        c23b = Choice.create(option: "Write: Lets get to work!", event_id: e23.id)
+     #event
+        e24 = Event.create(evt: "Meet Isabel", content: "This lab is pretty difficult. What do you want to do?", npc_id: isabel.id)
+     #choice
+         c24a = Choice.create(option: "Ask a Coach for Help", event_id: e24.id)
+         c24b = Choice.create(option: "Ask an Instructor for Help", event_id: e24.id)
+         c24c = Choice.create(option: "Ask another Student for Help", event_id: e24.id)
+         c24d = Choice.create(option: "Give Up", event_id: e24.id)
+    #event
+        e25 = Event.create(evt: "Ask Rei", content: "Looks like you have some syntax errors right here and here!", npc_id: rei.id)
+    #choice
+        c25a = Choice.create(option: "Say: How Did We Not Catch That!", event_id: e25.id)
+        c25b = Choice.create(option: "Say: Thank You So Much For Your Help!", event_id: e25.id)
+    #event
+         e26 = Event.create(evt: "Isabel", content: "... Hey, we did it! (Mood changes to Fulfilled.", npc_id: isabel.id)
+    #choice
+        c26a = Choice.create(option: "Learn Submit", event_id: e26.id)
+    #event
+        e27 = Event.create(evt: "Announce Code Challenge", content: "That lab was really hard but it will give you an idea of what to expect on the code challenge.", npc_id: rei.id)
+    #choice
+        c27a = Choice.create(option: "Code Challenge?!?!", event_id: e27.id)
+    #event
+        e28 = Event.create(evt: "Confirm", content: "Yup! Code challenges are how we test your knowledge of core concepts. Your first one will be next week but for now, it's time to pick a Cohort name!", npc_id: rei.id)
+    #choice
+        c28a = Choice.create(option: "Next", event_id: e28.id)
+    #event
+        e29 = Event.create(evt: "Vote", content: "What would you like to name your cohort?", npc_id: vote.id)
+    #choice
+        c29a = Choice.create(option: "Pry Babies", event_id: e29.id)
+        c29b = Choice.create(option: "Go Getters and Trend Setters", event_id: e29.id)
+        c29c = Choice.create(option: "French Pry", event_id: e29.id)
+        c29d = Choice.create(option: "License to Nil", event_id: e29.id)
+    #event
+        e30 = Event.create(evt: "Vote", content: "Drum roll please... your cohort name is: Go Getters and Trend Setters!!", npc_id: graham.id)
+    #choice
+        c30a = Choice.create(option: "*prying*", event_id: e30.id)
+
+        # next - graham tells you to get rest so you go to bed, window npc says you left the window open and woke up sick, parent or sibling brings soup, study for code challenge
+
+    
+    
+
+
+    
