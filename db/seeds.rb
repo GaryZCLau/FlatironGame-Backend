@@ -73,8 +73,8 @@ Choice.destroy_all
     xavier = Npc.create(name: "Xavier Carty", nickname: "Xavier", description: "Student", image: "characters/xavier.png")
 
     # NPC Events
-    pairprogram = Npc.create(name: "Pair Program", nickname: "Pair Program", description: "Team work makes the dream work!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
-    mod1c = Npc.create(name: "Mod1 Code Challenge", nickname: "Mod1 Code Challenge", description: "Test your might!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
+    pairprogram = Npc.create(name: "Pair Program", nickname: "Pair Program", description: "Team work makes the dream work!", image: "icons/pair.png")
+    code = Npc.create(name: "Mod1 Code Challenge", nickname: "Mod1 Code Challenge", description: "Test your might!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
     bed = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
     mom = Npc.create(name: "Bed", nickname: "Bed", description: "Mother knows best.", image: "icons/mom.png")
     germs = Npc.create(name: "Bed", nickname: "Bed", description: "These germs will make your stress level go up!", image: "icons/germs.png")
