@@ -76,12 +76,13 @@ Choice.destroy_all
     pairprogram = Npc.create(name: "Pair Program", nickname: "Pair Program", description: "Team work makes the dream work!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
     mod1c = Npc.create(name: "Mod1 Code Challenge", nickname: "Mod1 Code Challenge", description: "Test your might!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
     bed = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
-    mom = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
-    germs = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
-    vote = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
-    laptop = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
-    sun = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
-    canary = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
+    mom = Npc.create(name: "Bed", nickname: "Bed", description: "Mother knows best.", image: "icons/mom.png")
+    germs = Npc.create(name: "Bed", nickname: "Bed", description: "These germs will make your stress level go up!", image: "icons/germs.png")
+    vote = Npc.create(name: "Bed", nickname: "Bed", description: "Make your voice heard.", image: "icons/vote.png")
+    laptop = Npc.create(name: "Bed", nickname: "Bed", description: "Macbook Pro", image: "icons/laptop.png")
+    sun = Npc.create(name: "Bed", nickname: "Bed", description: "It's a beautiful day to be stuck in the house.", image: "icons/sun.png")
+    canary = Npc.create(name: "Bed", nickname: "Bed", description: "Your app!", image: "icons/canary.png")
+    window = Npc.create(name: "Bed", nickname: "Bed", description: "This is how germs get in.", image: "icons/window.png")
     
     
 
