@@ -83,7 +83,7 @@ Choice.destroy_all
     sun = Npc.create(name: "Bed", nickname: "Bed", description: "It's a beautiful day to be stuck in the house.", image: "icons/sun.png")
     canary = Npc.create(name: "Bed", nickname: "Bed", description: "Your app!", image: "icons/canary.png")
     window = Npc.create(name: "Bed", nickname: "Bed", description: "This is how germs get in.", image: "icons/window.png")
-    
+    instructors = Npc.create(name: "Flatiron Instructors", description: "So proud!", image: "icons/instructors.png")
     
 
 # Events/Choices ----------------------------------------
@@ -293,7 +293,7 @@ Choice.destroy_all
     #choice
         c44 = Choice.create(option: "Work on Labs Solo", event_id: e44.id)
    #event
-        e45 = Event.create(evt: "Interrupting Cold", content: "... (Your cold is getting worse, maybe it's time to take more medicine? +3 Stress. Health changes to Very Sick.)", npc_id: sick.id)
+        e45 = Event.create(evt: "Interrupting Cold", content: "... (Your cold is getting worse, maybe it's time to take more medicine? +3 Stress. Health changes to Very Sick.)", npc_id: germs.id)
    #choice
         c45 = Choice.create(option: "Continue", event_id: e45.id)
    #event
@@ -348,14 +348,14 @@ Choice.destroy_all
     #choice
         c56 = Choice.create(option: "Start Working", event_id: e56.id)
     #event
-        e57 = Event.create(evt: "Laptop", content: "... (The day before it's due, you notice a huge bug. You try to fix it on your own but it's hopeless. What would you like to do? +3 Stress)", npc_id: cpu.id)
+        e57 = Event.create(evt: "Laptop", content: "... (The day before it's due, you notice a huge bug. You try to fix it on your own but it's hopeless. What would you like to do? +3 Stress)", npc_id: laptop.id)
     #choice
         c57a = Choice.create(option: "Ask Stephanie for Help", event_id: e57.id)
         c57b = Choice.create(option: "Ask Isabel for Help", event_id: e57.id)
         c57c = Choice.create(option: "Ask one of the Coaches for Help", event_id: e57.id)
         c57d = Choice.create(option: "Ask your Instructor for Help", event_id: e57.id)
     #event
-        e58 = Event.create(evt: "Asking for Help", content: "It looks like it was just a typo on line 6 of your User model!", npc_id: stephanie.id)
+        e58 = Event.create(evt: "Asking for Help", content: "It looks like it was just a typo on line 6 of your User model!", npc_id: steph.id)
     #choice
         c58a = Choice.create(option: "Say: It's Always a Typo", event_id: e58.id)
         c58b = Choice.create(option: "Say: Thanks, Steph!", event_id: e58.id)
@@ -365,7 +365,7 @@ Choice.destroy_all
         c59a = Choice.create(option: "Say: I'm excited to see what everyone did!", event_id: e59.id)
         c59b = Choice.create(option: "Say: Are you almost ready too?", event_id: e59.id)
     #event
-        e60 = Event.create(evt: "Yup", content: "I have a few more things I want to implement but I can definitely finish in time. I can't believe we're almost done with Mod 1!", npc_id: stephanie.id)
+        e60 = Event.create(evt: "Yup", content: "I have a few more things I want to implement but I can definitely finish in time. I can't believe we're almost done with Mod 1!", npc_id: steph.id)
     #choice
         c60 = Choice.create(option: "Say: Yoooo, same.", event_id: e60.id)
     #event
@@ -390,7 +390,7 @@ Choice.destroy_all
     #event
         e65 = Event.create(evt: "Present sdsd", content: "Now we have Donny!", npc_id: michelle.id)
     #choice
-        c66 = Choice.create(option: "Next", event_id: e66.id)
+        c66 = Choice.create(option: "Next", event_id: e65.id)
     #event
         e67 = Event.create(evt: "Present 2", content: "My app, Snow Strike, allows users to view snow forecasts and track their ski trips!", npc_id: donny.id)
     #choice
@@ -403,7 +403,7 @@ Choice.destroy_all
      #choice
         c68a = Choice.create(option: "Next", event_id: e68.id)
      #event
-        c69 = Event.create(evt: "Present 3", content: "I created an app that lets you book and manage dog walking appointments! I call it Busy Paws!", npc_id: isabel.id)
+        e69 = Event.create(evt: "Present 3", content: "I created an app that lets you book and manage dog walking appointments! I call it Busy Paws!", npc_id: isabel.id)
      #choice
          c69a = Choice.create(option: "Ooooh!", event_id: e69.id)
          c69b = Choice.create(option: "Ahhh!", event_id: e69.id)
@@ -414,7 +414,7 @@ Choice.destroy_all
     #choice
        c70 = Choice.create(option: "Next", event_id: e70.id)
     #event
-        e71 = Event.create(evt: "Present 4", content: "I wanted to connect volunteers with organizations in need so I coded 'We Volunteer'!", npc_id: stephanie.id)
+        e71 = Event.create(evt: "Present 4", content: "I wanted to connect volunteers with organizations in need so I coded 'We Volunteer'!", npc_id: steph.id)
     #choice
         c71a = Choice.create(option: "Ooooh!", event_id: e71.id)
         c71b = Choice.create(option: "Ahhh!", event_id: e71.id)
@@ -430,7 +430,4 @@ Choice.destroy_all
         c73 = Choice.create(option: "Stop for Applause", event_id: e30.id)
     #event
         e74 = Event.create(evt: "Finish", content: "Congratulations! You passed Mod 1 without burning out! You win!", npc_id: instructors.id)
-    
-
-
     
