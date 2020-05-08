@@ -59,6 +59,7 @@ Choice.destroy_all
     gracie = Npc.create(name: "Gracie McGuire", nickname: "Gracie", description: "Coach", image: "characters/gracie.png" )
     michelle = Npc.create(name: "Michelle Pathe", nickname: "Michelle", description: "Community Lead", image: "characters/michelle.png")
     signe = Npc.create(name: "Signe Knutson", nickname: "Signe", description: "Senior Education Manager", image: "characters/signe.png")
+    instructors = Npc.create(name: "Instructors", nickname: "M", description: "Mod 1 Instructors", image: "characters/instructors.png")
 
     # Go Getters and Trend Setters
     gabby = Npc.create(name: "Gabrielle Noel", nickname: "Gabby", description: "Student", image: "characters/gabby.png")
@@ -73,8 +74,9 @@ Choice.destroy_all
     xavier = Npc.create(name: "Xavier Carty", nickname: "Xavier", description: "Student", image: "characters/xavier.png")
 
     # NPC Events
-    pairprogram = Npc.create(name: "Pair Program", nickname: "Pair Program", description: "Team work makes the dream work!", image: "icons/pair.png")
+    pairprogram = Npc.create(name: "Pair Program", nickname: "Pair Program", description: "Team work makes the dream work!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
     code = Npc.create(name: "Mod1 Code Challenge", nickname: "Mod1 Code Challenge", description: "Test your might!", image: "https://course_report_production.s3.amazonaws.com/rich/rich_files/rich_files/999/s300/flatironschool.png")
+<<<<<<< HEAD
     bed = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.svg")
     mom = Npc.create(name: "Bed", nickname: "Bed", description: "Mother knows best.", image: "icons/mom.png")
     germs = Npc.create(name: "Bed", nickname: "Bed", description: "These germs will make your stress level go up!", image: "icons/germs.png")
@@ -84,6 +86,17 @@ Choice.destroy_all
     canary = Npc.create(name: "Bed", nickname: "Bed", description: "Your app!", image: "icons/canary.png")
     window = Npc.create(name: "Bed", nickname: "Bed", description: "This is how germs get in.", image: "icons/window.png")
     instructors = Npc.create(name: "Flatiron Instructors", description: "So proud!", image: "icons/instructors.png")
+=======
+    bed = Npc.create(name: "Bed", nickname: "Bed", description: "Tempurpedic, the best bed in the world", image: "icons/bed.png")
+    mom = Npc.create(name: "Mom", nickname: "Bed", description: "Mother knows best.", image: "icons/mom.png")
+    germs = Npc.create(name: "Germs", nickname: "Bed", description: "These germs will make your stress level go up!", image: "icons/germs.png")
+    vote = Npc.create(name: "Poll", nickname: "Bed", description: "Make your voice heard.", image: "icons/vote.png")
+    laptop = Npc.create(name: "Laptop", nickname: "Bed", description: "Macbook Pro", image: "icons/laptop.png")
+    sun = Npc.create(name: "Sun", nickname: "Bed", description: "It's a beautiful day to be stuck in the house.", image: "icons/sun.png")
+    canary = Npc.create(name: "Canary", nickname: "Bed", description: "Your app!", image: "icons/canary.png")
+    window = Npc.create(name: "Window", nickname: "Bed", description: "This is how germs get in.", image: "icons/window.png")
+    
+>>>>>>> 972d1a5681fa5354abf51a18b0c83dd9cadfcecc
     
 
 # Events/Choices ----------------------------------------
@@ -219,7 +232,7 @@ Choice.destroy_all
     #choice
         c28a = Choice.create(option: "Next", event_id: e28.id)
     #event
-        e29 = Event.create(evt: "Vote", content: "What would you like to name your cohort?", npc_id: vote.id)
+        e29 = Event.create(evt: "Vote", content: "What would you like to name your cohort?", npc_id: graham.id)
     #choice
         c29a = Choice.create(option: "Vote: Pry Babies", event_id: e29.id)
         c29b = Choice.create(option: "Vote: Go Getters and Trend Setters", event_id: e29.id)
@@ -228,7 +241,7 @@ Choice.destroy_all
     #event
         e30 = Event.create(evt: "Vote", content: "Drum roll please... your cohort name is: Go Getters and Trend Setters!!", npc_id: graham.id)
     #choice
-        c30a = Choice.create(option: "*prying*", event_id: e30.id)
+        c30a = Choice.create(option: "*Pry*", event_id: e30.id)
     
     #event
         e31 = Event.create(evt: "Go to Bed", content: "I think it's time to call it a night, Go Getters! Make sure to get some rest and study for the code challenge.", npc_id: graham.id)
@@ -272,13 +285,13 @@ Choice.destroy_all
         e40 = Event.create(evt: "CC logistics", content: "Lets review for the code challenge! During the challenge, you'll have 60 minutes to build a series of Ruby methods. Writing error-free code is more important than completing all of the deliverables for this! Prioritize writing methods that work over writing more methods that don't work. (+4 Stress)", npc_id: graham.id)
      #choice
          c40a = Choice.create(option: "Say: Easier said than done!", event_id: e40.id)
-         c40a = Choice.create(option: "Say: We got this!", event_id: e40.id)
+         c40b = Choice.create(option: "Say: We got this!", event_id: e40.id)
     #event
         e41 = Event.create(evt: "Review questions", content: "Can anyone tell me the difference between the .map and .collect ennumerables?", npc_id: graham.id)
     #choice
         c41a = Choice.create(option: "One draws a map and the other forms a collection!", event_id: e41.id)
-        c41a = Choice.create(option: "One creates a new array while one edits the same array!", event_id: e41.id)
-        c41a = Choice.create(option: "They actually do the exact same thing.", event_id: e41.id)
+        c41b = Choice.create(option: "One creates a new array while one edits the same array!", event_id: e41.id)
+        c41c = Choice.create(option: "They actually do the exact same thing.", event_id: e41.id)
     #event
         e42 = Event.create(evt: "Answer", content: "The correct answer is that .map and .collect function the exact same way.", npc_id: gary.id)
     #choice
@@ -286,8 +299,8 @@ Choice.destroy_all
     #event
         e43 = Event.create(evt: "Answer2", content: "That's correct! The next question is true or false: A class is like a blueprint that defines how to build an object.", npc_id: graham.id)
     #choice
-        c43 = Choice.create(option: "Say: True", event_id: e43.id)
-        c43 = Choice.create(option: "Say: False", event_id: e43.id)
+        c43a = Choice.create(option: "Say: True", event_id: e43.id)
+        c43b = Choice.create(option: "Say: False", event_id: e43.id)
     #event
         e44 = Event.create(evt: "Correct", content: "That was true! Great job, Go Go Getters and Trend Setters. If you keep reviewing and practicing, this code challenge will be a breeze.", npc_id: graham.id)
     #choice
@@ -333,9 +346,9 @@ Choice.destroy_all
      #choice
          c53a = Choice.create(option: "Start Code Challenge", event_id: e53.id)
      #event
-         e54 = Event.create(evt: "Finish CC", content: "... You barely finish the Code Challenge. But you passed!", npc_id: code.id)
+         e54 = Event.create(evt: "Finish CC", content: "... You barely finish the Code Challenge. But you passed! (Gained skill: Object-Oriented Programming)", npc_id: code.id)
      #choice
-         c54 = Choice.create(option: "Give Yourself A Pat On The Back", event_id: e30.id)
+         c54 = Choice.create(option: "Give Yourself A Pat On The Back", event_id: e54.id)
     #event
         e55 = Event.create(evt: "Project Week", content: "For the remainder of Mod 1, you will be putting together everything you learned to create a Command Line application! Please submit pitches with your app ideas for approval. (+4 Stress)", npc_id: syl.id)
     #choice
@@ -427,7 +440,7 @@ Choice.destroy_all
     #event
         e73 = Event.create(evt: "My App", content: "Introducing Canary, an app that connects users of all ages to sex education resources. Here, you can register, login, and be guided to age-appropriate videos and websites.", npc_id: canary.id)
     #choice
-        c73 = Choice.create(option: "Stop for Applause", event_id: e30.id)
+        c73 = Choice.create(option: "Stop for Applause", event_id: e73.id)
     #event
         e74 = Event.create(evt: "Finish", content: "Congratulations! You passed Mod 1 without burning out! You win!", npc_id: instructors.id)
     
