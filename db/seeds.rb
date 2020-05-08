@@ -229,7 +229,7 @@ Choice.destroy_all
     #event
         e30 = Event.create(evt: "Vote", content: "Drum roll please... your cohort name is: Go Getters and Trend Setters!!", npc_id: graham.id)
     #choice
-        c30a = Choice.create(option: "*pry*", event_id: e30.id)
+        c30a = Choice.create(option: "*Pry*", event_id: e30.id)
     
     #event
         e31 = Event.create(evt: "Go to Bed", content: "I think it's time to call it a night, Go Getters! Make sure to get some rest and study for the code challenge.", npc_id: graham.id)
@@ -334,7 +334,7 @@ Choice.destroy_all
      #choice
          c53a = Choice.create(option: "Start Code Challenge", event_id: e53.id)
      #event
-         e54 = Event.create(evt: "Finish CC", content: "... You barely finish the Code Challenge. But you passed!", npc_id: code.id)
+         e54 = Event.create(evt: "Finish CC", content: "... You barely finish the Code Challenge. But you passed! (Gained skill: Object-Oriented Programming)", npc_id: code.id)
      #choice
          c54 = Choice.create(option: "Give Yourself A Pat On The Back", event_id: e54.id)
     #event
